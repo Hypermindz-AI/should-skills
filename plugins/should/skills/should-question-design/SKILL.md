@@ -57,3 +57,11 @@ The model judges; it does not calculate. Before calling `should`, compute totals
 ## 8. Close the loop
 
 When the real answer is known, call `record_outcome` with the `decision_id`, `result` (correct, incorrect or unknown), `actual` and a `source`. Record only what is actually known.
+
+## 9. Without the MCP: the CLI
+
+If the `should` MCP tool isn't available but a shell is, the `should` CLI (npm `@hypermindz/should`, with `SHOULD_API_KEY` set) makes the same decision. Everything above still applies.
+- Ask: `should ask "<question>" --context-json '<json>'` (or `--context <file>`, `--template <id@version>`, `--yes-threshold 0.95 --no-threshold 0.8`). Add `--json` to read the full result.
+- Act only on exit code 0 (yes). 1 is no; 2 is escalate (hand it to a person); 3, 4 and 5 are errors or a non-yes/no answer: do not act.
+- Look up a decision with `should log <decision_id>`; close the loop with `should outcome <decision_id> correct|incorrect|unknown --actual yes|no --source <where it came from>`.
+- Batches and `explain_decision` need the MCP tool or the HTTP API.

@@ -13,6 +13,10 @@ Three skills and one remote MCP server. Nothing else: no hooks, agents, commands
 - **MCP server:** `should` at `https://should.hypermindz.ai/mcp` (HTTP). It receives the question and the context your agent sends with each call.
 - **Nothing else.** The skills are instructions to the model; they run no code on your machine.
 
+## Without MCP
+
+An agent with a shell can call the `should` CLI instead (npm `@hypermindz/should`, not published yet): its exit code is the answer, 0 only for yes. `should-question-design` says how; the [repo README](../../README.md#cli-scripts-ci-and-agents-without-mcp) lists the commands and exit codes. The CLI is a separate install, not part of this plugin.
+
 ## Data policy
 
 should() stores a SHA-256 hash of each input, not the raw context, unless you opt in. See https://should.hypermindz.ai/privacy.
