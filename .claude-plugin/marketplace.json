@@ -9,7 +9,7 @@
       "name": "should",
       "source": "./plugins/should",
       "description": "Skills that let an agent ask should() before it acts: yes, no or escalate. Includes the should MCP server.",
-      "version": "0.1.0"
+      "version": "0.1.1"
     }
   ]
 }
