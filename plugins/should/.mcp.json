@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "should": {
+      "type": "http",
+      "url": "https://should.hypermindz.ai/mcp"
+    }
+  }
+}

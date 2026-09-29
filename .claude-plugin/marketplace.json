@@ -1,0 +1,15 @@
+{
+  "name": "hypermindz",
+  "owner": { "name": "HyperMindZ" },
+  "metadata": {
+    "description": "HyperMindZ plugins for Claude"
+  },
+  "plugins": [
+    {
+      "name": "should",
+      "source": "./plugins/should",
+      "description": "Skills that let an agent ask should() before it acts: yes, no or escalate. Includes the should MCP server.",
+      "version": "0.1.0"
+    }
+  ]
+}
